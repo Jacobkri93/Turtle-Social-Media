@@ -2,11 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/head.html(pageTitle = 'Home - Tortoiseify
 &#128034;')">
+    <link rel="stylesheet" href="mystylesheet.css">
+
 </head>
 <header th:replace="fragments/header.html(currentPage = 'Home')">
 </header>
 <body>
-<form action="create-new-post" method="post">
+
+<img src="green-leaf-turtle-logo-ilustration_105179-10.png" alt="Turtle logo"><img>
+
+<h1>Tortoiseify</h1>
+<h2>the Social Media for Turtles</h2>
+
+<form action="/submit-post" method="post">
     <label for="title">Title of your post</label>
     <br>
     <input type="text" name="title" id="title">
@@ -14,11 +22,8 @@
     <br>
     <label for="content">What's on your mind</label>
     <br>
-<!--    <input type="text" name="content" id="content">-->
+    <!--    <input type="text" name="content" id="content">-->
     <textarea name="content" cols="40" rows="2" id="content"></textarea>
-
-
-
 
 
     <br>
@@ -44,7 +49,12 @@
 
 </form>
 
-<form action="Show Dashboard" method="post"></form>
+<!--<button onclick="'/www.scarymommy.com/turtle-puns-jokes/'">Turtle Jokes</button>-->
+
+<p>But wait! Have you read some of theese?</p>
+<a href="https://www.scarymommy.com/turtle-puns-jokes/" target="_blank">Turtle Jokes</a>
+
+
 </body>
 <footer th:replace="fragments/footer.html"></footer>
 </html>

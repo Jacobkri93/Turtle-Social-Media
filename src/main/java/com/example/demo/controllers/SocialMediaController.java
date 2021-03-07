@@ -1,14 +1,12 @@
 package com.example.demo.controllers;
 
 import com.example.demo.models.Post;
-import org.springframework.core.style.ToStringCreator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.w3c.dom.DOMStringList;
 
 import java.util.ArrayList;
 
@@ -34,7 +32,7 @@ public class SocialMediaController {
         return "post-form.html";
     }
 
-    @PostMapping("/create-new-post")
+    @PostMapping("/submit-post")
     public String createNewEvent(@RequestParam("title") String title, @RequestParam("content") String content, @RequestParam("visibility") String visibility, @RequestParam("gender") String gender) {
         // simulating new event creation
         Post post = new Post(title, content, visibility, gender);
@@ -53,7 +51,6 @@ public class SocialMediaController {
                 publicPosts.add(post);
             }
         }
-
         return publicPosts;
     }
     @GetMapping("/AboutUs")

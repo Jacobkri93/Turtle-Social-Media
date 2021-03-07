@@ -2,11 +2,16 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments/head.html(pageTitle = 'Success - Tortoiseify
 &#128034;')">
+    <link rel="stylesheet" href="mystylesheet.css">
 </head>
 <header th:replace="fragments/header.html(currentPage = 'Success')">
 </header>
 <body>
     <h1>Your post was successfully created!</h1>
+    <form action="/submit-post" method="Get"></form>
+
+
+
 
 </body>
 <footer th:replace="fragments/footer.html"></footer>

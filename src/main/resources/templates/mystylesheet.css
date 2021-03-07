@@ -1,0 +1,20 @@
+body {
+    background-color: #363d45;
+}
+h1 {
+    color: #35793c;
+}
+h2 {
+    color: #35793c;
+}
+p {
+    color: #b8b6b6;
+}
+body{
+    background:url('https://media.giphy.com/media/YkMf8py6XfaY9mrzgD/source.gif') repeat-y 100% 100% fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
