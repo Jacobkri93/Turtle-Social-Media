@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head.html(pageTitle = 'Home - Tortoiseify
+&#128034;')">
+</head>
+<header th:replace="fragments/header.html(currentPage = 'Home')">
+</header>
+<body>
+<form action="create-new-post" method="post">
+    <label for="title">Title of your post</label>
+    <br>
+    <input type="text" name="title" id="title">
+
+    <br>
+    <label for="content">What's on your mind</label>
+    <br>
+<!--    <input type="text" name="content" id="content">-->
+    <textarea name="content" cols="40" rows="2" id="content"></textarea>
+
+
+
+
+
+    <br>
+    <label for="public">Public</label>
+    <input type="radio" name="visibility" id="public" value="public">
+    <label for="private">Private</label>
+    <input type="radio" name="visibility" id="private" value="private">
+
+    <br>
+
+    <label for="date">Date:</label> <br>
+    <input id="date" type="date" name="dato"> <br>
+
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="turtle">
+    <label for="other">Turtle</label>
+    <br>
+
+    <button type="submit">Create new post</button>
+
+</form>
+
+<form action="Show Dashboard" method="post"></form>
+</body>
+<footer th:replace="fragments/footer.html"></footer>
+</html>
